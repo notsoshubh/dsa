@@ -2,4 +2,4 @@
 
 ## Data Structure and Algorithms
 
-This repository contain all the Practice class created while learning DSA.
+This repository contains all the Practice classes created while learning DSA.
