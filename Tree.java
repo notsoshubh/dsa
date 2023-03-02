@@ -294,4 +294,21 @@ public class Tree {
             return getAncestors(value, list, root.leftChild);
         return null;
     }
+
+    public boolean isBalanced(){
+        return isBalanced(root);
+    }
+
+    private boolean isBalanced(Node root){
+        if (root == null)
+            return true;
+        var balanceFactor = height(root.leftChild) - height(root.rightChild);
+        if (balanceFactor > 1 || balanceFactor < -1)
+            return false;
+        return isBalanced(root.rightChild) && isBalanced(root.leftChild);
+    }
+
+    public boolean isPerfect(){
+        return size() == Math.pow(2, height(root) + 1) - 1;
+    }
 }
